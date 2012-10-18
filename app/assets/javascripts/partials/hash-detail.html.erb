@@ -1,0 +1,13 @@
+<section id="tweets">
+	<p class="twitterFeed">#{{params.hash}} Feed </p>
+	<ul>
+		<li ng-repeat="tweet in tweets">
+
+			<img ng-src="{{tweet.tweet_user.profile_image_url_https}}" alt="{{tweet.user.name}}"><h4>{{tweet.tweet_user.name}}</h4>  <h5>@{{tweet.tweet_user.nickname}}</h5>
+			<p>{{tweet.text}}</p>
+			<h5>Followers: {{tweet.tweet_user.followers_count}}  Retweeted: {{tweet.retweet_count}}
+			</h5>
+		</li>
+	</ul>
+
+</section>

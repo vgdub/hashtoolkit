@@ -1,0 +1,88 @@
+.social {
+	font-family: "SSSocial";
+}
+.standard {
+	font-family: "SSStandard"; 
+}
+html{
+	height: 100%;
+	width: 100%;
+}
+body{
+	margin-top: 5%;
+	margin-left: 5%;
+	background: url("birdtracks.gif")99% 100% no-repeat;
+	background-color: $background;
+	color: #e5e5e5;
+	font-family: "ronnia-condensed", sans-serif;
+}
+a{
+	color: #ffffff;
+	text-decoration: none;
+}
+a:hover{
+	color: $twitter;
+}
+h1{
+	font-size: 2em;
+	font-family: "bello-pro", cursive;
+	color: $heading;
+}
+h2{
+	font-size: 3em;
+}
+nav{
+	float:left;
+	width: 25%;
+	height: 95%;
+	ul{
+		width: 55%;
+		margin-left: 5%;
+	}
+}
+article{
+	float:left;
+	width:65%;
+	height: 100%;
+}
+.hashSearch{
+	border: 2px solid #00a9dc;
+	background: $twitter;
+}
+#newHash{
+	margin-top: 15%;
+	width: 100%;
+	input{
+		padding: 0;
+		height: 3em;
+		width: 43%;
+		margin:none;
+		margin-right: 5%;
+	}
+}
+#pastHash{
+	margin-top: 5%;
+	width: 93%;
+	li{
+		border: 1px solid #DBDBDB; 
+		padding: 2%;
+		background-color: #eaeaea;
+		a{
+			color: #000000;
+			&:hover{
+				color:$twitter;
+			}
+		}
+	}
+}
+.button{
+	text-align: center;
+	background: #292727;
+	display: inline-block;
+	margin-top: 5%;
+	border: 1px solid black;
+	letter-spacing: 1px;
+	&:hover{
+		background: #0a056a;
+	}
+}

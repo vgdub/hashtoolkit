@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="hashtoolkit">
+<head>
+  <title>Hashtoolkit</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <script type="text/javascript" src="//use.typekit.net/nug1frk.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+<body>
+
+<%= yield %>
+
+<script type="text/javascript">
+  var user = "<%= current_user.nickname %>"
+</script>
+
+<script src="http://s0.railsrumble.com/banner.js" type="text/javascript"></script>
+</body>
+</html>

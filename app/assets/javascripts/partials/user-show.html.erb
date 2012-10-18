@@ -1,0 +1,21 @@
+<section id="newHash">
+	<form ng-submit="submit()" ng-controller="TwitterCntl">
+		<input type="text" ng-model="hash" name="hash" placeholder="# New Search" required class="hashInput">
+		<button type="submit" id="submit" ng-click="searchHash()" value="Hashtag Track" class="hashSearch"></button>
+		<ul>
+			<li ng-repeat="tweet in tweets[0]">
+				<p>{{tweet.text}}</p>
+			</li>
+		</ul>
+	</form>
+</section>
+
+<section id="pastHash">
+	<ol>
+		<li ng-repeat="hash in user.hashtags | orderBy:mostRecent">
+			<p><a ng-href="#/hash/{{hash.text | lowercase}}"  ><span class="hash">#</span>{{hash.text}}</a></p>
+		</li>
+	</ol>
+</section>
+
+<!-- ng-click="updateTweets(hash.text)" -->

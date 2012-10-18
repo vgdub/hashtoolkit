@@ -1,0 +1,41 @@
+<nav>
+	<h1>HashToolkit</h1>
+	<ul class="account">
+		<li>
+			<a ng-href="#/dashboard"><%= current_user.nickname %></a><br>
+			<%= image_tag current_user.avatar %>
+		</li>
+		
+		<li>
+			<a ng-href="#/dashboard"><i class="ss-icon standard">user</i> My Dashboard</a>
+		</li>
+		
+		<li>
+			<form ng-submit="submit()" ng-controller="TwitterCntl">
+				<input type="text" name="hash" ng-model="hash" placeholder="New # Search" required><br>
+				<button href="#/hash/{{hash | lowercase}}" class="submit" ng-click="searchHash"><i class="ss-icon standard">search</i> Submit</button>
+		</li>
+		<ul>
+			<li ng-repeat="hash in hashtaglist">
+						<p>{{hash}}</p>
+			</li>
+		</ul>
+		</form>
+		</li>
+		<li>
+			<ul ng-controller="UserCntl" class="hashes">
+				<li ng-repeat="hash in user.hashtags | orderBy:mostRecent">
+					<p><a ng-href="#/hash/{{hash.text | lowercase}}" ng-click="getHash(hash.text)" ><span class="hash">#</span>{{hash.text}}</a></p>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<%= link_to "Log out", signout_path %>
+		</li>
+		
+	</ul>
+</nav>
+
+<article ng-view>
+	
+</article>

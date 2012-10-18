@@ -1,0 +1,9 @@
+development:
+  uri: "mongodb://127.0.0.1:27017/hashtoolkit_dev"
+
+test:
+  uri: <%= ENV['MONGODB_TEST_URI'] %>
+
+# set these environment variables on your prod server
+production:
+  uri: "mongodb://mongouser:codeacademy1@ds035257.mongolab.com:35257/hashtoolkit_prod"
