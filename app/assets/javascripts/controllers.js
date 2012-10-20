@@ -17,10 +17,11 @@
 
 // }]);
 
-controllers.controller('TwitterCntl', ['$scope', '$routeParams', 'Twitter', 'User', function($scope, $routeParams, Twitter, User){
+controllers.controller('TwitterCntl', ['$scope', '$routeParams', '$location', 'Twitter', 'User', function($scope, $routeParams, $location, Twitter, User){
 	
   $scope.name = "TwitterCntl";
   $scope.params = $routeParams
+  $scope.hash = "#railsrumble"
   $scope.user = User.get();
   $scope.tweets = Twitter.get({
       search:$scope.params.hash
@@ -35,11 +36,11 @@ controllers.controller('TwitterCntl', ['$scope', '$routeParams', 'Twitter', 'Use
   $scope.mostRecent = User.query('last_viewed');
 
   $scope.searchHash = function() {
-    $scope.tweets = Twitter.get({search:$scope.hash});
+    $location.path( "/hash/" + $scope.hash.replace("#",""));
   };
 
   $scope.getHash = function() {
-    $scope.tweets = Twitter.get({search:$scope.params.hash})
+    $scope.tweets = Twitter.get({search:$scope.params.hash.replace("#","")})
   }
 
 }]);

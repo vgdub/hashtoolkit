@@ -13,7 +13,7 @@
 		<li>
 			<form ng-submit="submit()" ng-controller="TwitterCntl">
 				<input type="text" name="hash" ng-model="hash" placeholder="New # Search" required><br>
-				<button href="#/hash/{{hash | lowercase}}" class="submit" ng-click="searchHash"><i class="ss-icon standard">search</i> Submit</button>
+				<button href="#" class="submit" ng-click="searchHash()"><i class="ss-icon standard">search</i> Submit</button>
 		</li>
 		<ul>
 			<li ng-repeat="hash in hashtaglist">
