@@ -1,8 +1,6 @@
 /* LOGIN PAGE */
 .wrap{
-	padding-top: 5%;
-	padding-bottom: 5%;
-	padding-left: 5%;
+	padding: 5%;
 	width: 40%;
 	background: #585858;
 	margin: 0 auto;
@@ -17,24 +15,18 @@
 	text-align: center;
 	background: #292727;
 	display: inline-block;
-	margin-top: 5%;
 	border: 1px solid black;
 	letter-spacing: 1px;
-
 	&:hover{
 		background: #0a056a;
 	}
 }
 .tweet{
+	display: block;
+	margin: 10% auto;
 	width: 30%;
 	padding: 2% 8%;
-	margin-right: 1em;
 	color: $twitter;
-}
-.vote{
-	width: 30%;
-	padding: 2% 0%;
-	color: $like;
 }
 /* USER PAGE */
 .title{
